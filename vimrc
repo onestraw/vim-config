@@ -1,19 +1,30 @@
-" configure Vundle (Vim plugin manager)
+" ~~ I ~~. configure Vundle (Vim plugin manager)
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-"  Vim plugin manager.
+" Vim plugin manager.
 Plugin 'VundleVim/Vundle.vim'
 " Lean & mean status/tabline for vim that's light as air.
 Plugin 'vim-airline/vim-airline'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+" A tree explorer plugin for vim
+Plugin 'scrooloose/nerdTree'
+" Fuzzy file, buffer, mru, tag, etc finder
+Plugin 'ctrlpvim/ctrlp.vim'
+" Syntax checking hacks for vim
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 filetype on
 
+" ~~ II ~~. configure shortcuts for plugins
+map <C-n> :NERDTreeToggle<CR>
+
+
+" ~~ III ~~. configure vim 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
 if has("syntax")
