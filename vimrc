@@ -51,8 +51,3 @@ set nu
 set noswapfile
 set laststatus=2
 
-" Source a global configuration file if available
-if filereadable("~/vimrc.bundles")
-  source ~/vimrc.bundles
-endif
-
