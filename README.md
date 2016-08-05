@@ -4,3 +4,6 @@
 	cp vimrc ~/.vimrc
 	vim +PluginInstall +qall
 
+## Configure cscope
+
+    cp cscope_maps.vim ~/.vim/plugin/
