@@ -41,11 +41,30 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-" Uncomment the following to have Vim load indentation rules and plugins
-" according to the detected filetype.
-if has("autocmd")
-  filetype plugin indent on
-endif
+
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
+" Maps Ctrl-[h,j,k,l] to switch window
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+" CTRL-W t	move to the TOP window
+" CTRL-W b	move to the BOTTOM window
+map <C-t> <C-W>t
+map <C-b> <C-W>b
+
+" CTRL-W +	   increase current window height N lines
+" CTRL-W -	   decrease current window height N lines
+" CTRL-W <	   decrease current window width N columns
+" CTRL-W =	   make all windows the same height & width
+" CTRL-W >	   increase current window width N columns
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
@@ -61,4 +80,5 @@ set autoindent
 set nu
 set noswapfile
 set laststatus=2
+set paste
 
