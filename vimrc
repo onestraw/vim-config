@@ -55,10 +55,6 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-" CTRL-W t	move to the TOP window
-" CTRL-W b	move to the BOTTOM window
-map <C-t> <C-W>t
-map <C-b> <C-W>b
 
 " CTRL-W +	   increase current window height N lines
 " CTRL-W -	   decrease current window height N lines
