@@ -6,4 +6,4 @@
 
 ## Configure cscope
 
-    cp cscope_maps.vim ~/.vim/plugin/
+    cp plugin/*  ~/.vim/plugin/
