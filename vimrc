@@ -76,5 +76,4 @@ set autoindent
 set nu
 set noswapfile
 set laststatus=2
-set paste
 
