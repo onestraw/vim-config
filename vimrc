@@ -76,4 +76,8 @@ set autoindent
 set nu
 set noswapfile
 set laststatus=2
+set cursorline
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
+let Tlist_Use_Right_Window = 1

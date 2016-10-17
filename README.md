@@ -7,3 +7,6 @@
 ## Configure cscope
 
     cp plugin/*  ~/.vim/plugin/
+
+## Links
+- vim tab: http://vim.wikia.com/wiki/Using_tab_pages
