@@ -16,6 +16,8 @@ Plugin 'scrooloose/nerdTree'
 Plugin 'ctrlpvim/ctrlp.vim'
 " Syntax checking hacks for vim
 Plugin 'scrooloose/syntastic'
+" Go development plugin for Vim
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype on
@@ -73,7 +75,8 @@ set autowrite		" Automatically save before commands like :next and :make
 set hidden		" Hide buffers when they are abandoned
 set mouse=a		" Enable mouse usage (all modes)
 set autoindent
-set nu
+set number
+set hlsearch
 set noswapfile
 set laststatus=2
 set cursorline
