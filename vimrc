@@ -18,6 +18,10 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 " Go development plugin for Vim
 Plugin 'fatih/vim-go'
+" A code-completion engine for Vim
+Plugin 'Valloric/YouCompleteMe'
+" A statusline plugin for vim
+Plugin 'powerline/powerline'
 
 call vundle#end()
 filetype on
@@ -26,7 +30,7 @@ filetype on
 map <C-n> :NERDTreeToggle<CR>
 
 
-" ~~ III ~~. configure vim 
+" ~~ III ~~. configure vim
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
 if has("syntax")
@@ -84,3 +88,35 @@ hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=whi
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
 let Tlist_Use_Right_Window = 1
+
+" ~~ IV ~~. configure vim-go
+" https://github.com/fatih/vim-go-tutorial
+let mapleader = ","
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+
+" :GoInstallBinaries
+" :GoMetaLinter
+" :GoLint
+" :GoFmt
+" :GoDoc
+" :GoRun
+" :GoDef    :   ctrl + ]
+" :GoDefPop :   ctrl + t    / ctrl + o
+" :GoDecls
+" :GoDeclsDir
+" :GoFiles
+" :GoDeps
+
+let g:go_fmt_command = "goimports"
+"let g:go_fmt_fail_silently = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_build_constraints = 1
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+
+let g:go_version_warning = 0
