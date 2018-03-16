@@ -22,6 +22,8 @@ Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
 " A statusline plugin for vim
 Plugin 'powerline/powerline'
+" Improved nginx vim plugin
+Plugin 'chr4/nginx.vim'
 
 call vundle#end()
 filetype on
