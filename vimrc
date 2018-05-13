@@ -24,6 +24,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'powerline/powerline'
 " Improved nginx vim plugin
 Plugin 'chr4/nginx.vim'
+" Format code with one button press.
+Plugin 'Chiel92/vim-autoformat'
 
 call vundle#end()
 filetype on
@@ -36,7 +38,7 @@ map <C-n> :NERDTreeToggle<CR>
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
 if has("syntax")
-  syntax on
+    syntax on
 endif
 
 " If using a dark background within the editing area and syntax highlighting
@@ -46,7 +48,7 @@ set background=dark
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
 
@@ -64,22 +66,22 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" CTRL-W +	   increase current window height N lines
-" CTRL-W -	   decrease current window height N lines
-" CTRL-W <	   decrease current window width N columns
-" CTRL-W =	   make all windows the same height & width
-" CTRL-W >	   increase current window width N columns
+" CTRL-W +     increase current window height N lines
+" CTRL-W -     decrease current window height N lines
+" CTRL-W <     decrease current window width N columns
+" CTRL-W =     make all windows the same height & width
+" CTRL-W >     increase current window width N columns
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
-set showcmd		" Show (partial) command in status line.
-set showmatch		" Show matching brackets.
-set ignorecase		" Do case insensitive matching
-set smartcase		" Do smart case matching
-set incsearch		" Incremental search
-set autowrite		" Automatically save before commands like :next and :make
-set hidden		" Hide buffers when they are abandoned
-set mouse=a		" Enable mouse usage (all modes)
+set showcmd         " Show (partial) command in status line.
+set showmatch       " Show matching brackets.
+set ignorecase      " Do case insensitive matching
+set smartcase       " Do smart case matching
+set incsearch       " Incremental search
+set autowrite       " Automatically save before commands like :next and :make
+set hidden          " Hide buffers when they are abandoned
+set mouse=a         " Enable mouse usage (all modes)
 set autoindent
 set number
 set hlsearch
@@ -122,3 +124,16 @@ let g:go_highlight_build_constraints = 1
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 
 let g:go_version_warning = 0
+
+" Configure vim-autoformat
+noremap <F3> :Autoformat<CR>
+au BufWrite * :Autoformat
+autocmd FileType vim,tex let b:autoformat_autoindent=0
+" let g:autoformat_autoindent = 0
+" let g:autoformat_retab = 0
+" let g:autoformat_remove_trailing_spaces = 0
+"
+" manually autoindent, retab or remove trailing whitespace with the following respective commands.
+" gg=G
+" :retab
+" :RemoveTrailingSpaces
