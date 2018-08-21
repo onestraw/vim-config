@@ -26,6 +26,14 @@ Plugin 'powerline/powerline'
 Plugin 'chr4/nginx.vim'
 " Format code with one button press.
 Plugin 'Chiel92/vim-autoformat'
+" An autocompletion daemon for the Go programming language
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
+" surround.vim: quoting/parenthesizing made simple
+Plugin 'tpope/vim-surround'
+" Vim motions on speed
+Plugin 'easymotion/vim-easymotion'
+" Highlighting thrift
+Plugin 'solarnz/thrift.vim'
 
 call vundle#end()
 filetype on
