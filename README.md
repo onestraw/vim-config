@@ -4,9 +4,15 @@
     cp vimrc ~/.vimrc
     vim +PluginInstall +qall
 
+## Configure YouCompleteMe
+
+- install ycmd
+
+    checkout the [installation guide](https://github.com/Valloric/YouCompleteMe#mac-os-x)
+
 ## Configure cscope
 
-    cp plugin/*  ~/.vim/plugin/
+    mkdir -p ~/.vim/plugin/ && cp plugin/*  ~/.vim/plugin/
 
 ## Install dependencies
 
